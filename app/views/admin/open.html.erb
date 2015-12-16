@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+                           <!-- This is the page that lists a user's saves -->
+<h1>Open Save</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @stores.each do |store| %>
+      <tr>
+        <td><%= store.name %></td>
+        <td><%= link_to "Open", {:controller => "admin", :action => "edit", :save_id => store.id }%></td>
+        <td><%= link_to 'Destroy', store, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New', {:controller => "admin", :action => "index", :save_id => nil} %>

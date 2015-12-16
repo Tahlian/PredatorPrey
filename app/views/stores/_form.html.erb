@@ -1,0 +1,59 @@
+<%= form_for(@store) do |f| %>
+  <% if @store.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@store.errors.count, "error") %> prohibited this store from being saved:</h2>
+
+      <ul>
+      <% @store.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :predator %><br>
+    <%= f.number_field :predator, size: 20 %>
+  </div>
+  <div class="field">
+    <%= f.label :prey %><br>
+    <%= f.number_field :prey, size: 20 %>
+  </div>
+  <div class="field">
+    <%= f.label :alpha %><br>
+    <%= f.text_field :alpha, size: 20 %>
+  </div>
+  <div class="field">
+    <%= f.label :beta %><br>
+    <%= f.text_field :beta, size: 20 %>
+  </div>
+  <div class="field">
+    <%= f.label :gamma %><br>
+    <%= f.text_field :gamma, size: 20 %>
+  </div>
+  <div class="field">
+    <%= f.label :delta %><br>
+    <%= f.text_field :delta, size: 20 %>
+  </div>
+  <div class="field">
+    <%= f.label :time %><br>
+    <%= f.number_field :time, size: 20 %>
+  </div>
+  <div class="field">
+    <%= f.label :timeincrement %>
+    <%= f.text_field :timeincrement, size: 20 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+  <input type="button" id="submit" onclick="drawGraph()" value="Draw Graph">
+
+  <div class="graph">
+    <div id="placeholder" class="demo-placeholder" style="height:800px; width:1000px"></div>	
+  </div>
+<% end %>

@@ -1,0 +1,24 @@
+<nav> <!-- This is the index. It has the menu bar and loads the partial form -->
+<ul>
+  <li>
+  <div class="dropdown">
+    <a href="#" class="dropbtn">File</a>
+    <div class="dropdown-content">
+      <a id="new_save-btn" class="new_save-btn">Save</a>
+      <!--<a id="update_save-btn" class="update_save-btn">Update</a>-->
+      <!--<a href="#">Open</a>-->
+      <%= link_to 'open', {:controller => "admin", :action => "open"} %>
+    </div>
+  </div>
+  </li>
+  <li><a>Edit</a></li>
+  <li><a>Help</a></li>
+</ul>
+</nav>
+
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+
+<%= render 'form' %>
+

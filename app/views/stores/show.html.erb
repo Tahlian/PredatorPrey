@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @store.name %>
+</p>
+
+<p>
+  <strong>Predator:</strong>
+  <%= @store.predator %>
+</p>
+
+<p>
+  <strong>Prey:</strong>
+  <%= @store.prey %>
+</p>
+
+<p>
+  <strong>Alpha:</strong>
+  <%= @store.alpha %>
+</p>
+
+<p>
+  <strong>Beta:</strong>
+  <%= @store.beta %>
+</p>
+
+<p>
+  <strong>Gamma:</strong>
+  <%= @store.gamma %>
+</p>
+
+<p>
+  <strong>Delta:</strong>
+  <%= @store.delta %>
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @store.time %>
+</p>
+
+<p>
+  <strong>Increment:</strong>
+  <%= @store.timeincrement %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @store.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_store_path(@store) %> |
+<%= link_to 'Back', stores_path %>
